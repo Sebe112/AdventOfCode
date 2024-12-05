@@ -1,6 +1,6 @@
 result = 0
 
-with open("data2.txt", "r") as file:
+with open("AdventOfCodeDay2/data2.txt", "r") as file:
     for line in file:
         numbers = list(map(int, line.split()))
         if all(1 <= (numbers[i] - numbers[i - 1]) <= 3 for i in range(1, len(numbers))) or \
