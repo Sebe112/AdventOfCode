@@ -14,15 +14,11 @@ for value_set in values:
 
     for rule in rules:
         if rule[0] in value_set and rule[1] in value_set:
-            position_left = value_set.index(rule[0])
-            position_right = value_set.index(rule[1])
-
-            if position_left > position_right:
+            if value_set.index(rule[0]) > value_set.index(rule[1]):
                 all_rules_valid = False
                 break
 
     if all_rules_valid:
-        mid = len(value_set)//2
-        result += value_set[mid]
+        result += value_set[len(value_set)//2]
 
 print(result)
